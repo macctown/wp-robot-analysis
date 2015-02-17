@@ -25,3 +25,18 @@ Author URI: http://blog.zhang-wei.me
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 ?>
+<?php
+
+function robot_analysis_dashboard()
+{
+    include 'robotadmin.php';
+}
+
+function robot_analysis_actions()
+{
+    add_options_page('WPA Dashboard', 'WP Robot Analysis', 'activate_plugins', 
+            dirname(__FILE__) . '/robotadmin.php');
+}
+
+add_action('admin_menu', 'robot_analysis_actions');
+?>
